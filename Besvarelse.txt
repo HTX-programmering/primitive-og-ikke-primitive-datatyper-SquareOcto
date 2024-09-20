@@ -1,0 +1,113 @@
+Java primitive data types:
+  Int -- 4 bytes.
+  float -- 4 bytes.
+  Char -- 2 bytes.
+  boolean -- 1 byte.
+  byte -- 1 byte.
+  short -- 2 bytes.
+  long -- 8 bytes.
+  double -- 8 bytes.
+
+MAKSIMUM- OG MINIMUMS-VÆRIDER:
+Integer:
+  println(Integer.MAX_VALUE); // Maksimum
+  println(Integer.MIN_VALUE); // Minimum  
+output: 
+  2147483647 // maks
+  -2147483648 // min
+
+  Man kan også beregne maks sådan her:
+      2^(4*8-1) = 2^31 - 1 (-1 fordi 0 er med)
+    For at finde det største tal for integer, tager jeg antal bits for en integer, 4*8, jeg ganger 8 med 4, fordi der er ->
+    8 bits på en byte, og en integer har 4 bytes.
+    minimmum ville så være dette tal, i minus. Så minimum ville være det Her: -(2^31).
+
+
+Char:
+  println(Character.MAX_VALUE+0);
+  println(Character.MIN_VALUE+0);
+output:
+  65535 // maks
+  0 // min
+  
+  Eller det her:
+    maks = 2^(2*8-1) = 2^15 - 1 (fordi 0 er med)
+    min = -maks = -(2^15) Hov! Det er sguda da ikke rigtigt! Programmet siger at min er 0, og det siger dokumentationen også->
+    Grunden til dette er fordi byten for char, ikke er signed, så den sidste bit ændrer ikke på fortegnet.
+
+
+Float:
+  println(Float.MAX_VALUE);
+  println(Float.MIN_VALUE);
+output:
+  3.4028235E38 // maks
+  1.4E-45 // min
+
+  Eller det her:
+    maks = 2^(4*8-1) = 2^31 - 1
+    min = -(2^31)
+
+
+Boolean:
+  Her kan man ikke bare sige "println(Boolean.MAX_VALUE), og det samme for MIN_VALUE.
+  Man får desværre en fejl hvis man forsøger på dette.
+  Men, et boolean kan kun have 2 værdier, sandt og falsk. Som så betyder at den er binær, altså 0 og 1.
+
+  Men, i og med at den har 1 byte, ville man tro at dens maks ville være 2^7, og 
+
+
+byte:
+  println(Byte.MAX_VALUE);
+  println(Byte.MIN_VALUE);
+output:
+  127
+  -128
+
+  En byte har.....1 byte, så 8 bits.
+  maks = 2^(8-1) = 2^7 - 1
+  min = -(2^7)
+
+
+short:
+  println(Short.MAX_VALUE);
+  println(Short.MIN_VALUE);
+output:
+  32767
+  -32768
+
+  Eller det her:
+    maks = 2^(2*8-1) = 2^15 - 1
+    min = -(2^15)
+
+
+long:
+  println(Long.MAX_VALUE);
+  println(Long.MIN_VALUE);
+output:
+  9223372036854775807
+  -9223372036854775808
+
+  eller:
+    maks = 2(8*8) = 2^(8^2) = 2^64 - 1
+    min = -(2^64)
+
+
+double:
+  println(Double.MAX_VALUE);
+  println(Double.MIN_VALUE);
+output:
+  1.7976931348623157E308
+  4.9E-324
+
+  eller:
+    maks = 2^(8*8) = 2^(8^2) = 2^64 - 1
+    min = -(2^64)
+
+
+KVADRATROD FLOAT OG DOUBLE PROGRAM:
+// min kode
+  float f = sqrt(2);
+  println(f);
+  double d = Math.sqrt(2);
+  println(d);
+// min kode
